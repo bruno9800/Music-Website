@@ -1,57 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/style.css">
     <title>Music Website</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="navbar">
+    <header id="header">
+        <nav class="content">
             <img src="img/logo.png" class="logo">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SPECIFICATIONS</a></li>
-                <li><a href="#">PRODUCTS</a></li>
-                <li><a href="#">CONNECT</a></li>
-        </div>
+           
+           <div class="menu">
+               <ul>
+                   <li><a href="#">HOME</a></li>
+                   <li><a href="#">ABOUT</a></li>
+                   <li><a href="#">SPECIFICATIONS</a></li>
+                   <li><a href="#">PRODUCTS</a></li>
+                   <li><a href="#">CONNECT</a></li>
+               </ul>
+           </div>
+            <div class="toggle icon-menu"></div>
+            <div class="toggle icon-cross"></div>
+        </nav>
+    </header>
 
+    <main>
         <div class="content">
-            <div class="left-col">
-                <h1>THE<br>REAL<br>SOUND</h1>
-            </div>
-            <div class="right-col">
-                <p>Click Here To Listen</p>
-                <img src="img/play.png" id="icon">
+            <div class="colors">
+                <div class="left-col">
+                    <h1>THE REAL SOUND</h1>
+                </div>
+                <div class="right-col">
+                    <p>Click Here To Listen</p>
+                    <img src="img/play.png" id="icon">
+                </div>
             </div>
         </div>
-    </div>
 
-    <audio id="mySong">{
-        <source src="/img/song.mp3" type="audio/mp3">
-    </audio>
+        <audio id="mySong">{
+            <source src="/img/song.mp3" type="audio/mp3">
+        </audio>
+    </main>
 
-
-    <script>
-        var mySong = document.getElementById("mySong");
-        var icon = document.getElementById("icon");
-
-        icon.onclick = function(){
-            if(mySong.paused){
-                mySong.play();
-                icon.src = "img/pause.png";
-            }else{
-                mySong.pause();
-                icon.src = "img/play.png";
-            }
-        }
-    </script>
-
+   <script src="main.js"></script>
 </body>
 
 </html>

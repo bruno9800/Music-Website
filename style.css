@@ -1,9 +1,179 @@
 *{
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url('img/image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    margin-top: 6rem;
+}
+
+
+.content {
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+header#header {
+    margin-bottom: 2rem;
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    width: 140px;
+    cursor: pointer;
+    padding-top: 20px ;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+nav ul li {
+    text-align: center;
+}
+
+.colors {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .left-col {
+    font-size: 1.75rem;
+    max-width: 13rem;
+}
+
+.colors .right-col {
+    display: flex;
+    align-items: center;
+}
+
+.colors .right-col img {
+    width: 80px;
+    cursor: pointer;
+}
+
+.toggle {
+    display: none;
+}
+
+@media (max-width:693px) {
+
+    main {
+        margin-top: 1rem;
+    }
+    nav .menu {
+        opacity: 0;
+        visibility: hidden;
+        top: -20rem;
+        transition: 0.2s;
+
+        display: none;
+    }
+
+    nav.show .menu {
+        display: grid;
+        place-content: center;
+
+        opacity: 1;
+        visibility: visible;
+
+
+        background-color: white;
+
+        height: 100vh;
+        width: 100vw;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    nav.show .menu ul {
+        display: grid;
+        gap: 2.5rem;
+        font-size: 1.75rem;
+        font-weight: bold;
+        
+    }
+
+    .toggle {
+        display: block;
+        color: black;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    nav .icon-cross {
+        visibility: hidden;
+        opacity: 0;
+        top: -3rem;
+        position: absolute;
+        right: 5rem;
+
+        transition: 0.3s;
+        
+    }
+
+    nav.show .icon-cross {
+    
+        visibility: visible;
+        opacity: 1;
+        top: 3rem;
+    }
+
+    .colors {
+        display: grid;
+        gap: 11rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .colors .left-col {
+        font-size: 1rem;
+        max-width: 4rem;
+
+    }
+
+    .colors .right-col {
+        
+    }
+}
+/*
+*{
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
 }
-.container{
+#header {
     height: 100vh;
     width: 100%;
     background-image: url('img/image.png');
@@ -19,6 +189,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .logo{
     width: 140px;
     cursor: pointer;
@@ -64,3 +235,5 @@
     width: 80px;
     cursor: pointer;
 }
+
+*/
